@@ -1,3 +1,5 @@
+using eTickets.mvc.Data;
+
 namespace eTickets.mvc
 {
     public class Program
@@ -6,10 +8,13 @@ namespace eTickets.mvc
         {
             var builder = WebApplication.CreateBuilder(args);
 
+            // Add custom my dbContext to services
+            builder.Services.AddDbContext<AppDbContext>();
+
             // Add services to the container.
             builder.Services.AddControllersWithViews();
 
-            var app = builder.Build();
+            var app = builder.Build(); 
 
             // Configure the HTTP request pipeline.
             if (!app.Environment.IsDevelopment())
@@ -17,7 +22,7 @@ namespace eTickets.mvc
                 app.UseExceptionHandler("/Home/Error");
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
-            }
+            }   
 
             app.UseHttpsRedirection();
             app.UseStaticFiles();
