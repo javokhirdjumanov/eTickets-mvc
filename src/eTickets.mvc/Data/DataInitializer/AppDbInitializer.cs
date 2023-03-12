@@ -38,15 +38,15 @@ public class AppDbInitializer
                 {
                     new Actor()
                     {
-                        FullName = "Actor 1",
-                        Biography = "This is the Bio of the first actor",
-                        ProfilePictureUrl = "http://dotnethow.net/images/actors/actor-1.jpeg"
+                        FullName = "Angilena Jolie",
+                        Biography = "This is the Angilena Jolie's Biography",
+                        ProfilePictureUrl = "http://dotnethow.net/images/actors/actor-3.jpeg"
                     },
                     new Actor()
                     {
-                        FullName = "Actor 2",
-                        Biography = "This is the Bio of the second actor",
-                        ProfilePictureUrl = "http://dotnethow.net/images/actors/actor-2.jpeg"
+                        FullName = "Peter Atkinson",
+                        Biography = "This is the Peter Atkinson's Biography",
+                        ProfilePictureUrl = "http://dotnethow.net/images/actors/actor-4.jpeg"
                     }
                 });
                 context.SaveChanges();
@@ -110,13 +110,13 @@ public class AppDbInitializer
                     {
                         new Actor_Movie()
                         {
-                            ActorId = 1,
-                            MovieId = 1
+                            ActorId = 3,
+                            MovieId = 2
                         },
                         new Actor_Movie()
                         {
-                            ActorId = 2,
-                            MovieId = 2
+                            ActorId = 4,
+                            MovieId = 1
                         }
                     });
                 context.SaveChanges();
